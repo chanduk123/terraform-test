@@ -1,23 +1,24 @@
 #This Terraform Code De ploys Basic VPC Infra.
 
 
+
+#This is hardcode which needs to change every time so decalred in .tfvares
+provider "aws" {
+   access_key = "${var.aws_access_key}"
+   secret_key = "${var.aws_secret_key}"
+   region = "${var.aws_region}"
+}
+
+
 terraform {
     backend "s3" {
-    bucket = "chandustesting"
+    bucket = "chandustest"
     key = "terraform.tfstate"
     region = "us-east-1"
     #dynamodb_table = "terraform-up-and-running-locks"
-    encrypt = true
-
+    #encrypt = true
     }
 }
-
-#This is hardcode which needs to change every time so decalred in .tfvares
-#provider "aws" {
- #   access_key = "AKIAUL4VP7XZPSAJWNVB"
-  #  secret_key = "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"
-   # region = "us-east-1"
-#}
 
 
 
