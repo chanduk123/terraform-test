@@ -14,5 +14,5 @@ public_subnet3_name = "Terraform_Public_Subnet3-devtesting"
 private_subnet_name = "Terraform_Private_Subnet-devtesting"
 Main_Routing_Table = "Terraform_Main_table-devtesting"
 key_name = "LaptopKey"
-environment = "dev
+environment = "dev"
 
